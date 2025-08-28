@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Bài 2 - Máy tính đơn giản";
+}
+
+<h2>Máy tính đơn giản</h2>
+
+<form method="post">
+    <label>Nhập số thứ nhất:</label>
+    <input type="number" step="any" name="num1" required />
+    <br />
+
+    <label>Nhập số thứ hai:</label>
+    <input type="number" step="any" name="num2" required />
+    <br />
+
+    <label>Chọn phép tính:</label>
+    <select name="phepTinh" required>
+        <option value="cong">Cộng (+)</option>
+        <option value="tru">Trừ (-)</option>
+        <option value="nhan">Nhân (×)</option>
+        <option value="chia">Chia (÷)</option>
+    </select>
+    <br />
+
+    <button type="submit">Tính toán</button>
+</form>
+
+@if (ViewBag.KetQua != null)
+{
+    <h3>@ViewBag.KetQua</h3>
+}
